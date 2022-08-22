@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import { Email, GitHub, LinkedIn, Phone } from "@mui/icons-material";
 import ListItem from '@mui/material/ListItem';

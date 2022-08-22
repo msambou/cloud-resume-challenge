@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Resume/Header";
 import "@fontsource/roboto/300.css";

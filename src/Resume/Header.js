@@ -1,5 +1,4 @@
-import { Avatar, Grid, Paper } from "@mui/material";
-import Box from "@mui/material/Box";
+import { Avatar, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 const Header = () => {
