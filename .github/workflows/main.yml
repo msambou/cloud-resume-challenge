@@ -11,9 +11,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-Jobs:
-  run:
-    runs-on: "ubuntu-latest"
+jobs:
+  build-and-deploy:
+    runs-on: 'ubuntu-latest'
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -22,20 +22,20 @@ Jobs:
       - uses: actions/checkout@v3
 
       - name: Install Dependencies
-      - run: npm install
+        run: npm install
 
       - name: Build
-      - run: npm run build
+        run: npm run build
 
-      - name: Deploy
-        uses: reggionick/s3-deploy@v3
-        with:
-          folder: build
-          bucket: ${{ secrets.S3_BUCKET }}
-          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-          # dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          invalidation: /
-          delete-removed: true
-          no-cache: true
-          private: true
-          filesToInclude: ".*/*,*/*,**"
+#       - name: Deploy
+#         uses: reggionick/s3-deploy@v3
+#         with:
+#           folder: build
+#           bucket: ${{ secrets.S3_BUCKET }}
+#           bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+#           # dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+#           invalidation: /
+#           delete-removed: true
+#           no-cache: true
+#           private: true
+#           filesToInclude: ".*/*,*/*,**"
