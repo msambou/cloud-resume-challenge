@@ -6,7 +6,6 @@ provider "aws" {
 resource "aws_s3_bucket" "b" {
   bucket = var.bucket_name
   acl    = "public-read"
-#   policy = file("policy.json")
 
   website {
     index_document = "index.html"
