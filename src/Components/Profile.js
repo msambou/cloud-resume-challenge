@@ -7,7 +7,7 @@ const Profile = () => {
       <Box>
         <Typography variant="h5">PROFILE</Typography>
         <Typography paragraph={true}>
-          Software Engineer having 5 years of professional experience
+          Software Engineer having 4 years of professional experience
           developing, deploying, and maintaining production systems. Highly
           specialized in cloud-native development, systems administration, and
           DevOps. 
