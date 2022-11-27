@@ -1,7 +1,30 @@
 import { Avatar, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import { useEffect, useState } from "react";
+import Views from "../Components/Views"
+import Resume from "../service/Resume"
+
+const resumeService = new Resume()
 
 const Header = () => {
+  const [count, setcount] = useState()
+  useEffect(()=>{
+    fetchViews()
+    incrementViews()
+  }, [])
+
+  async function  fetchViews() {
+    var response = await resumeService.getViews();
+    console.log(response)
+    if (response.status) {
+      setcount(response.view_count)
+    }
+  }
+
+  async function incrementViews() {
+    var response = await resumeService.incrementViews();
+    console.log(response)
+  }
   return (
     <>
       <Grid container>
@@ -16,11 +39,11 @@ const Header = () => {
               <Avatar sx={{ width: 120, height: 120, float:'right', marginTop: -10}}>MS</Avatar>
             </Grid>
           </Grid>
-          {/* <Grid md={4} style={{ background: 'red' }}> */}
-              {/* <Avatar sx={{ width: 100, height: 100}}>MS</Avatar> */}
-            {/* </Grid> */}
+
         </Grid>
-        <Grid md={3}></Grid>
+        <Grid md={3}>
+          <Views count={count}></Views>
+        </Grid>
       </Grid>
     </>
   );
