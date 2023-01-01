@@ -1,43 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <script src="https://tjxx0uyvij.execute-api.us-east-2.amazonaws.com/dev/view-count"></script>
+    <title>Michael Sambou Portfolio</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boootstrap Portfolio/Resume Theme for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- github calendar css -->
+    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar-responsive.css">
+    <!-- github activity css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+    <!-- ******HEADER****** -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <img class="profile-image img-fluid float-start rounded-circle" src="assets/images/mike.jpg"
+                        width="150" height="150" alt="profile image" />
+                    <div class="profile-content">
+                        <h1 class="name">Michael Sambou</h1>
+                        <h2 class="desc">Software Engineer</h2>
+                        <ul class="social list-inline">
+                            <li class="list-inline-item"><a href="https://twitter.com/mikesambou"><i
+                                        class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a
+                                    href="https://www.linkedin.com/in/michael-sambou-7aa25a19b?trk=public_profile_browsemap&originalSubdomain=rw"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/msambou"><i
+                                        class="fab fa-github-alt"></i></a></li>
+
+                        </ul>
+                    </div><!--//profile-->
+                </div><!--//col-->
+                <div class="col-12 col-md-auto">
+                    <div class="dark-mode-switch d-flex">
+                        <div class="form-check form-switch mx-auto mx-md-0">
+                            <input type="checkbox" class="form-check-input me-2" id="darkSwitch" checked="true" />
+                            <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+                        </div>
+                    </div><!--//dark-mode-switch-->
+
+                    <div>Profile views: <span id="view_count">0</span></div>
+
+
+
+                </div><!--//col-->
+            </div><!--//row-->
+        </div><!--//container-->
+    </header><!--//header-->
+
+    <div class="container sections-wrapper py-5">
+        <div class="row">
+            <div class="primary col-lg-8 col-12">
+                <section class="about section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">About me</h2>
+                        <div class="content">
+                            <p>As a software engineer with 4 years of professional experience, I have gained expertise
+                                in developing, deploying, and maintaining production systems. My specialized skills
+                                include cloud-native development, systems administration, and DevOps. I have a strong
+                                track record of successfully building and managing production systems that are scalable,
+                                reliable, and efficient. In my current role, I use my skills and experience to help
+                                organizations leverage the benefits of cloud-based technologies and agile development
+                                practices to create innovative solutions and drive business value.</p>
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+
+
+
+                <section class="experience section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Research Assistant - <span class="place"><a
+                                            href="http://teel.cs.cmu.edu">Technology for Effective and Efficient
+                                            Learning (TEEL) Lab, CMU SCS</a></span> <span class="year">(2021 -
+                                        Present)</span></h3>
+                                <p>Upgraded an entire code-base of a hands-on project to a latest AWS Java SDK version
+                                </p>
+                                <p> Updated portions of a write-up to guide learners in navigating various Cloud Service
+                                    Providers(AWS, Azure, and GCP) dashboards</p>
+                                <p>Built course content and auto-graders in Java, introducing learners to GitHub actions
+                                    CI/CD pipelines</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Graduate Teaching Assistant - <span class="place"><a
+                                            href="https://www.cmu.edu">Carnegie Mellon University, Africa</a></span>
+                                    <span class="year">(2021)</span></h3>
+                                <p>Designed lab work for the Advanced Database Systems course. Through these lab
+                                    exercises, students were exposed to hands-on projects</p>
+                                <p>Held Office Hours to assist students with issues related to course assignments</p>
+                                <p>Held practical lab sessions to teach students how to use various DevOps tools.</p>
+                                <p>Organized office hours to assist students debug their code and to explain certain
+                                    theoretical DevOps concepts students might have trouble with.</p>
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a
+                                            href="https://www.rema.gov.rw">Rwanda Environment Management Authority
+                                            Kigali, Rwanda</a></span> <span class="year">(2021)</span></h3>
+                                <p>Designed and programmed a frontend application for processing licensing applications,
+                                    replacing the manual way of requesting and processing licenses and thus increased
+                                    the department’s overall work efficiency.</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Learning Support - <span class="place"><a
+                                            href="https://www.cmu.edu">Carnegie Mellon University, Pittsburgh</a></span>
+                                    <span class="year"></span></h3>
+                                <p>Responded to questions and provided assistance on Piazza for the Fall 2022 Army AICT
+                                    cohort.</p>
+                                <p>Reviewed student work and identified common errors and areas for improvement.</p>
+                                <p>Proposed instructional redesigns to address identified issues and improve student
+                                    learning.</p>
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <h3 class="title">Volunteer work - <span class="place"><a
+                                            href="https://www.cmu.edu">Carnegie Mellon University</a></span> <span
+                                        class="year"></span></h3>
+                                <p>I led a team of volunteers to teach college students how to use different Microsoft
+                                    productivity tools. We held training sessions and worked with the students to help
+                                    them become proficient with the software.</p>
+                            </div><!--//item-->
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+
+                <section class="experience section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Some Projects</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title"><span>Streamlined Licensing Process</span> <span
+                                        class="badge badge-theme">Web App</span></h3>
+                                <p class="summary">Designed and programmed a frontend application for
+                                    processing licensing applications, replacing the manual
+                                    way of requesting and processing licenses and thus
+                                    increased the department’s overall work efficiency</p>
+                                <p>Tools: <i>Express.js, PostGIS, Geoserver, Leaflet.js</i></p>
+                                <p><a class="more-link" href="https://bitbucket.org/luc_/webmap_parakou/src/master/"
+                                        target="_blank"><i class="fas fa-external-link-alt"></i>Code Draft</a></p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title"><span>Cloud Computing Auto-Grader</span> <span
+                                        class="badge badge-theme">Web App</span></h3>
+                                <p class="summary">Developed and deployed various auto-graders and
+                                    authored course content for a project-based online Cloud
+                                    DevOps and Cloud Computing course</p>
+                                <p>Tools: <i>Express.js, PostGIS, Geoserver, Leaflet.js</i></p>
+                                <p><a class="more-link" href="https://bitbucket.org/luc_/webmap_parakou/src/master/"
+                                        target="_blank"><i class="fas fa-external-link-alt"></i>Code Draft</a></p>
+                            </div><!--//item-->
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+                <section class="experience section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Carnegie Mellon University - <span class="place"><a
+                                            href="https://www.cmu.edu">Master Of Science in Information
+                                            Technology</a></span> <span class="year">(2020 - 2022)</span></h3>
+                                <p>Major: Software Engineering; Recipient of a full scholarship, funded by the
+                                    Mastercard Foundation</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">University of Ghana - <span class="place"><a
+                                            href="https://www.ug.edu.gh">Bachelor Of Science in Computer
+                                            Science</a></span> <span class="year">(2014 - 2018)</span></h3>
+
+                            </div><!--//item-->
+
+
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+
+
+                </section>
+                <section class="github section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">My GitHub</h2>
+                        <p> <a href="https://github.com/Bloggify/github-calendar" target="_blank"></a>
+
+                        <div id="github-graph" class="github-graph">
+
+                        </div><!--//github-graph-->
+
+                    </div><!--//secton-inner-->
+                </section><!--//section-->
+
+            </div><!--//primary-->
+            <div class="secondary col-lg-4 col-12">
+                <aside class="info aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span> Accra,
+                                    Ghana</li>
+                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a
+                                        href="samboumichael@gmail.com">samboumichael@gmail.com</a></li>
+                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a
+                                        href="http://mikesambou.com">http://mikesambou.com</a></li>
+                                <i class="fa-solid fa-phone"></i><span class="sr-only">Phone</span>(+250) 78 668
+                                7189</a></li>
+
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//aside-->
+
+                <aside class="skills aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <p class="intro">
+                                Welcome to my skills section! In this section, you will find a list of the technical
+                                skills and knowledge that I have acquired throughout my career as a software engineer.
+                                My expertise covers a wide range of areas, including cloud-native development, systems
+                                administration, and DevOps. I have a proven track record of successfully applying these
+                                skills to develop, deploy, and maintain production systems for a variety of clients and
+                                organizations. I am constantly seeking to improve and expand my skillset, and I am
+                                always eager to take on new challenges and learn new technologies.</p>
+
+                            <div class="skillset">
+
+                                <div class="item">
+                                    <h2 class="level-title">Programming</h2>
+                                    <h6 class="subb">Java, Python, JavaScript, PHP</h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Databases</h2>
+                                    <h6 class="subb">MySQL, PostgreSQL, Cassandra, MongoDB</h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Cloud</h2>
+                                    <h6 class="subb">AWS, GCP, Azure</h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Frameworks</h2>
+                                    <h6 class="subb">Django, Spring Boot, Laravel, Git, Terraform</h6>
+                                </div>
+
+
+                                <div class="item">
+                                    <h2 class="level-title">Domain Expertise</h2>
+                                    <h6 class="subb">API development, Micro-services Michael Sambou Software & Cloud
+                                        DevOps Engineer Development, Cloud DevOps, Linux Administration, Docker &
+                                        Kubernetes</h6>
+                                </div>
+
+
+                                <div class="item">
+                                    <h2 class="level-title">Teaching</h2>
+
+                                    <h6 class="subb">Coursera: Cloud Computing Concepts Part 1</h6>
+
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">IBMDeveloperSkillsNetwork</h2>
+                                    <h6 class="subb"> Docker Essentials</h6>
+                                </div>
+
+
+                                <p><a class="more-link" href="https://github.com/msambou"><i
+                                            class="fas fa-external-link-alt"></i>More on GitHub</a></p>
+                            </div>
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                <aside class="skills aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Hobbies and Interests</h2>
+                        <div class="content">
+                            <p class="intro">
+                                In my free time, I enjoy a variety of activities that help me to relax and unwind. Some
+                                of my favorite hobbies include:</p>
+
+                            <div class="skillset">
+
+
+
+                                <div class="item">
+                                    <h2 class="level-title">Running</h2>
+                                    <h6 class="subb">I enjoy keeping fit and healthy by going for regular runs, and I
+                                        participate in local races and marathons when I can.</h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Travelling</h2>
+                                    <h6 class="subb">I am always looking for new and exciting places to visit, and I
+                                        love immersing myself in new cultures and trying local foods and activities.
+                                    </h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Debating</h2>
+                                    <h6 class="subb">I am passionate about current events and social issues, and I enjoy
+                                        debating and discussing these topics with others. I have participated in various
+                                        debating competitions and enjoy sharing my perspective on different issues.</h6>
+                                </div>
+
+
+
+
+                            </div><!--//content-->
+                        </div><!--//section-inner-->
+                </aside><!--//section-->
+                <aside class="skills aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Relevant courses</h2>
+                        <div class="content">
+                            <p class="intro"></p>
+
+                            <div class="skillset">
+
+                                <div class="item">
+                                    <h2 class="level-title">Cloud Computing</h2>
+                                    <h6 class="subb"></h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Distributed Systems</h2>
+                                    <h6 class="subb"></h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">DevOps</h2>
+                                    <h6 class="subb"></h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Design Patterns</h2>
+                                    <h6 class="subb"></h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Intrusion Detection Systems</h2>
+                                    <h6 class="subb"></h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Foundations of software engineering</h2>
+                                    <h6 class="subb"></h6>
+                                </div>
+
+                                <div class="item">
+                                    <h2 class="level-title">Databases</h2>
+                                    <h6 class="subb"></h6>
+                                </div>
+
+
+
+
+
+
+                            </div><!--//content-->
+                        </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+
+
+
+
+
+                <!-- Javascript -->
+                <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
+                <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+                <script type="text/javascript" src="assets/plugins/vanilla-rss/dist/rss.global.min.js"></script>
+                <script type="text/javascript" src="assets/plugins/dark-mode-switch/dark-mode-switch.js"></script>
+                <!-- github calendar plugin -->
+                <script type="text/javascript"
+                    src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
+                <!-- github activity plugin -->
+                <script type="text/javascript"
+                    src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+                <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
+                <!-- custom js -->
+                <script type="text/javascript" src="assets/js/main.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+                    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+                <script>$(function () {
+
+                        // Endpoint to get resume view count
+                        $.ajax({
+                            type: 'GET',
+                            url: 'https://tjxx0uyvij.execute-api.us-east-2.amazonaws.com/dev/view-count',
+                            success: function (data) {
+                                console.log('success', data);
+                                $("#view_count").html(data.view_count)
+                            }
+                        });
+
+                        // Endpoint to update resume view count
+                        $.ajax({
+                            type: 'PUT',
+                            url: 'https://tjxx0uyvij.execute-api.us-east-2.amazonaws.com/dev/view-count',
+                            success: function (data) {
+                                console.log('success', data);
+                            }
+                        });
+                    })</script>
+
+
+
+</body>
+<footer class="footer">
+    <div class="container-text-center">
+        <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">Designed with <span class="sr-only">love</span><i
+                class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com"
+                target="_blank">Xiaoying Riley</a> for developers</small>
+    </div><!--//container-->
+</footer><!--//footer-->
+
 </html>
